@@ -3,9 +3,9 @@
 $debug =0;
 
 require 'vendor/autoload.php';
+require 'getData.php';
 use Tree\Node\Node;
 
-include 'getData.php';
 
 $anzsic = getData();
 

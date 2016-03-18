@@ -10,7 +10,7 @@ include('..\adodb5\adodb.inc.php');
 $conn = new COM("ADODB.Connection") or die("Cannot start ADO");
 
 // Define the connection string and specify the database driver
-$connStr = "Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=.\dropdown\DataCodes.accdb";    //Put in the filepath to the access database where highlighted.
+$connStr = "Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:\Apache24\htdocs\Git\shl-prognostics\dropdown\DataCodes.accdb";    //Put in the filepath to the access database where highlighted.
  
  
 // Open the connection to the database
