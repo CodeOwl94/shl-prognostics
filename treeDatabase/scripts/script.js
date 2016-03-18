@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$("#test_paragraph_2").html("back");	
 
 		//Populate the first dropdown
-		$.getJSON("treeDBRecursive.php", success=function(data)
+		$.getJSON("first_dropdown.php", success=function(data)
 		{
 			/*if (data) {
 			  alert('Result');

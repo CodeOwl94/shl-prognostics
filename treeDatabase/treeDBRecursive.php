@@ -21,8 +21,7 @@ $rootNode = $builder->getNode();
 //Populate the tree
 recursiveAdd($rootNode, $anzsic);
 
-/*session_start();
-$_SESSION['anzsicTree'] = $rootNode;
+/*
 
 $anzsicTree = $_SESSION['anzsicTree'];*/
 
@@ -45,7 +44,10 @@ foreach ($arrayOfChildren as $row) {
 	$arrayOfValues[] = $rowValue;
 }
 
-echo json_encode($arrayOfValues);
+session_start();
+$_SESSION['anzsicTree'] = $arrayOfValues;
+
+//echo json_encode($arrayOfValues);
 
 
 ?>
