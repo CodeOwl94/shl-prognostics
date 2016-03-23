@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$("#test_paragraph_2").html("back");	
+
 
 		//Populate the first dropdown
 		$.getJSON("first_dropdown.php", success=function(data)
@@ -25,14 +25,14 @@ $(document).ready(function(){
 
 
 			
-	
 
+
+		});
+
+		$("#slctCat").change(function()
+		{
+			$("#test_paragraph_2").html($(this).val());	
+
+		});
 	});
-
-	$("#slctCat").change(function()
-	{
-		$("#test_paragraph_2").html($(this).val());	
-
-	});
-});
 
