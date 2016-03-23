@@ -27,11 +27,12 @@ else{
 	$placeHolder = array(); 
 
 	//Add a dummy row that is the root of everything
-		$placeHolder['id'] = 0;
-		
-		$placeHolder['text'] = "Root";
-		
-		$placeHolder['parent'] = -1;
+		$placeHolder['ID'] = 0;
+		$placeHolder['ANZSIC_Code'] = 0;
+		$placeHolder['Level'] = 0;
+		$placeHolder['Description'] = "Root";
+		$placeHolder['Division'] = "Root";
+		$placeHolder['Parent_ID'] = -1;
 
 		$anzsic[] = $placeHolder;
 
@@ -39,11 +40,12 @@ else{
 	while(!$rs->EOF){
 
 		//Add the separate columns of the query as separate entries to the $placeHolder array	
-		$placeHolder['id'] = (int)$rs->fields['ID']->value;
-		
-		$placeHolder['text'] = (string)$rs->fields['Description']->value;
-		
-		$placeHolder['parent'] = (int)$rs->fields['Parent_ID']->value;
+		$placeHolder['ID'] = (int)$rs->fields['ID']->value;
+		$placeHolder['ANZSIC_Code'] = (string)$rs->fields['ANZSIC_Code']->value;
+		$placeHolder['Level'] = (int)$rs->fields['Level']->value;
+		$placeHolder['Description'] = (string)$rs->fields['Description']->value;
+		$placeHolder['Division'] = (string)$rs->fields['Division']->value;
+		$placeHolder['Parent_ID'] = (int)$rs->fields['Parent_ID']->value;
 		
 
 		//Add the entire $placeHolder array which is currently just the row of data to the $anzsic matrix
@@ -54,7 +56,7 @@ else{
 	}
 
 	//Return the array in JSON format
-	echo json_encode($anzsic);
+	//echo json_encode($cats);
 }
 //Close the connection
 require 'closeDB.php';
