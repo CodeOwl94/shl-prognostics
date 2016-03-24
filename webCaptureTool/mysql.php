@@ -1,25 +1,26 @@
 <?php
 //Connect To Database
-$hostname='113.101.88.97.ukld.db.5513497.hostedresource.com';
+$hostname='http://systemhealthlab.ddns.net:3306';
 $username='root';
 $password='shl2016';
 $dbname='systemhealthlab';
 $usertable='users';
 $yourfield = 'id';
 
-mysql_connect($hostname,$username, $password) OR DIE ('Unable to connect to database! Please try again later.');
-mysql_select_db($dbname);
+$link = mysqli_connect($hostname,$username, $password, $dbname) OR DIE ('Unable to connect to database! Please try again later.');
+
 
 $query = 'SELECT * FROM ' . $usertable;
-$result = mysql_query($query);
+$result = mysqli_query($query);
+
 if($result) {
-    while($row = mysql_fetch_array($result)){
+    while($row = mysqli_fetch_array($result)){
         print $name = $row[$yourfield];
         echo 'Name ' . $name;
     }
 }
 else {
-print Database NOT Found ;
-mysql_close($db_handle);
+echo "Database NOT Found";
+mysqli_close($link);
 }
 ?>
