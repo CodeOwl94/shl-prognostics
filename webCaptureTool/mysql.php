@@ -7,10 +7,11 @@ $dbname='systemhealthlab';
 $usertable='users';
 $yourfield = 'id';
 
-$link = mysqli_connect($hostname,$username, $password, $dbname) OR DIE ('Unable to connect to database! Please try again later.');
+$link = mysqli_connect($hostname,$username, $password) OR DIE ('Unable to connect to database! Please try again later.');
+mysqli_select_db($dbname);
 
-
-$query = 'SELECT * FROM ' . $usertable;
+//$query = 'SELECT * FROM ' . $usertable;
+$query = 'SHOW DATABASES';
 $result = mysqli_query($query);
 
 if($result) {
