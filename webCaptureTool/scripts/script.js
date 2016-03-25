@@ -1,12 +1,10 @@
 $(document).ready(function(){
-alert("here");
-	//Populate the first dropdown
-	$.getJSON("first_dropdown.php", success = function(data)
-	{
-		alert("here");
-		//if(data.length)
-		//	alert("success");
 
+
+
+	//Populate the first dropdown
+	$.getJSON("first_name.php", success = function(data)
+	{
 		var options = "";
 
 		for(var i=0; i<Object.keys(data).length; i++)
@@ -16,8 +14,8 @@ alert("here");
 		}
 
 
-		$("#slctCat").append(options);
-		$("#slctCat").change();	//On page load, simulate a change so that the second dropdown is populated as well
+		$("#first_name").append(options);
+		$("#first_name").change();	//On page load, simulate a change so that the second dropdown is populated as well
 
 	});
 
