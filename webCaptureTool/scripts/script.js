@@ -1,9 +1,9 @@
 $(document).ready(function(){
-
+alert("here");
 	//Populate the first dropdown
-	$.getJSON("first_dropdown.json", success = function(data)
+	$.getJSON("first_dropdown.php", success = function(data)
 	{
-		//alert("here");
+		alert("here");
 		//if(data.length)
 		//	alert("success");
 

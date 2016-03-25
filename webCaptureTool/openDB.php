@@ -4,7 +4,7 @@ $debug=0;
 //This code opens a connection to the relevant database
 //You need to move this out of public access as it has login details for root! 
 
-$hostname='localhost';
+$hostname='systemhealthlab.ddns.net';
 $username='root';
 $password='shlWP2016';
 $dbname='systemhealthlab';
