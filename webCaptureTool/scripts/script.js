@@ -37,7 +37,6 @@ $(document).ready(function(){
 			var placeHolder = ($('#start_time').val());
 			placeHolder = placeHolder.replace("T"," ");
 			placeHolder +=":00";
-			alert(placeHolder);
 			$('<input>', {
 			    type: 'hidden',
 			    id: 'start_time_proper',
@@ -55,7 +54,6 @@ $(document).ready(function(){
 			var placeHolder = ($('#end_time').val());
 			placeHolder = placeHolder.replace("T"," ");
 			placeHolder +=":00";
-			alert(placeHolder);
 			$('<input>', {
 			    type: 'hidden',
 			    id: 'end_time_proper',
