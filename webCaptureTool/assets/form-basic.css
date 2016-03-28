@@ -56,6 +56,10 @@ html{
     border: 1px solid #dbdbdb;
 }
 
+.form-basic input[type=text]{
+    width: 50px;    
+}
+
 .form-basic input[type=radio],
 .form-basic input[type=checkbox]{
     box-shadow: none;

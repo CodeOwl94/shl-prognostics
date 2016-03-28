@@ -19,6 +19,33 @@ $(document).ready(function(){
 
 	});
 
+	//Populate the date
+	var dNow = new Date();
+	var utcdate= dNow.getDate() + '/' + (dNow.getMonth()+ 1) + '/' +  dNow.getFullYear();
+	$('#date').text(utcdate)
+
+	//Check the form
+	$('#submit').click(function(){
+
+		if (!($('#comments').val())) {
+			alert("Please add a comment");
+			return false;
+		}
+
+		if (!($('#start_time').val())) {
+			alert("Please choose a start time");
+			return false;
+		}
+
+		if (!($('#end_time').val())) {
+			alert("Please choose a end time");
+			return false;
+		}
+	});
+
+
+	
+
 
 });
 

@@ -9,8 +9,9 @@
 
 	<title>Basic Form</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-basic.css">
+    <link rel="stylesheet" href="assets/demo.css">
+    <link rel="stylesheet" href="assets/form-basic.css">
+	
 
 </head>
 
@@ -21,36 +22,90 @@
 		<h1>Data Entry Portal</h1>
     </header>
 
-   <!--See if you can add some space between the header and the form -->
+    <!--See if you can add some space between the header and the form -->
 
     <div class="main-content">
 
         <!-- You only need this form and the form-basic.css -->
 
-        <form class="form-basic" method="post" action="submit_form.php">
+        <form class="form-basic" method="post" action="submit_form.php" enctype="multipart/form-data">
 
             <div class="form-title-row">
                 <h1>Experiment Details</h1>
             </div>
 
             <div class="form-row">
-                <label>
+                <label>                    
                     <span>Name</span>
-                    <select name="first_name" id="first_name">
-                        
-                    </select>
+                    <select name="first_name" id="first_name"></select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Date</span>
+                    <span align="left" name="date" id="date"></span>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Start time</span>
+                    <input type="time" name="start_time" id="start_time">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>End time</span>
+                    <input type="time" name="end_time" id="end_time">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Motor Number</span>
+                    <input type="text" name="motor" id="motor">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Tyre Ring Set Number</span>
+                    <input type="text" name="tyre_ring" id="tyre_ring">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Drive Pulley Number</span>
+                    <input type="text" name="drive_pulley" id="drive_pulley">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Drive Belt Number</span>
+                    <input type="text" name="drive_belt" id="drive_belt">
                 </label>
             </div>
 
             <div class="form-row">
                 <label>
                     <span>Comments</span>
-                    <textarea name="comments"></textarea>
+                    <textarea name="comments" id="comments"></textarea>
                 </label>
             </div>
 
             <div class="form-row">
-                <button type="submit" name="submit" value="submit">Submit Details</button>
+                <label>
+                    <span>Upload File</span>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" name="submit" value="submit" id="submit">Submit Details</button>
             </div>
 
         </form>

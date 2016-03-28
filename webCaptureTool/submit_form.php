@@ -13,7 +13,7 @@ if (empty($_POST['first_name']) || empty($_POST['comments'])) {
 $firstName = $_POST['first_name'];
 $comments  = $_POST['comments'];
 
-mail('ashwindcruz@uwa.edu.au', 'Form submitted', 'Details are: '.$firstName." ".$comments);
+require "upload.php";
 
 echo "Submission successful";
 
