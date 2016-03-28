@@ -60,6 +60,10 @@ html{
     width: 50px;    
 }
 
+.form-basic input[type=number]{
+    width: 75px;     
+}
+
 .form-basic input[type=radio],
 .form-basic input[type=checkbox]{
     box-shadow: none;

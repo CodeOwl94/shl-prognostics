@@ -13,8 +13,8 @@ $query = "SELECT * FROM users";
 $result= mysqli_query($link, $query);
 
 if (!$result)
- 
-    print $conn->ErrorMsg();
+ 	echo "Didn't work";
+    //print $conn->ErrorMsg();
  
 else{
 

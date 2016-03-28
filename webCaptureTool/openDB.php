@@ -5,10 +5,10 @@ $debug=0;
 //You need to move this out of public access as it has login details for root! 
 
 $hostname='systemhealthlab.ddns.net';
-$username='root';
-$password='shlWP2016';
+$username='experimenter';
+$password='exp2016';
 $dbname='systemhealthlab';
-$usertable='users';
+//$usertable='users';
 
 $link = mysqli_connect($hostname,$username, $password, $dbname) OR DIE ('Unable to connect to database! Please try again later.');
 
@@ -20,6 +20,7 @@ if ($debug==1) {
 	}
 
 	echo 'Success... ' . mysqli_get_host_info($link) . "\n";
+	echo "</br>";
 }
 
 ?>
