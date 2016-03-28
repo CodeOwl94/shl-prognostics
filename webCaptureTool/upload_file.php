@@ -38,7 +38,8 @@ echo "</br>";
 //Update the filePath field in the MySQL table
 //Expand ../../ to the fullpath
 $proper_path = realpath($target_file);
-echo $proper_path;
+$proper_path = str_replace("\\", "\\\\", $proper_path);
+
 
 $query = 'UPDATE experiments SET file_path="' . $proper_path . '" WHERE id=' . $id;
 $result= mysqli_query($link, $query);    

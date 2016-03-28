@@ -7,8 +7,8 @@ if (empty($_POST['submit'])) {
 
 //Pull out all the form data
 $first_name = $_POST['first_name'];
-$start_time = $_POST['start_time'];
-$end_time = $_POST['end_time'];
+$start_time = $_POST['start_time_proper'];
+$end_time = $_POST['end_time_proper'];
 $motor = $_POST['motor'];
 $tyre_ring = $_POST['tyre_ring'];
 $drive_pulley = $_POST['drive_pulley'];
