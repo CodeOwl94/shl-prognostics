@@ -33,16 +33,25 @@ $(document).ready(function(){
 			alert("Please choose a start time");
 			return false;
 		}
+		
+		if (!($('#start_date').val())) {
+			alert("Please choose a start date");
+			return false;
+		}
 		else{ //Format the time a little
-			var placeHolder = ($('#start_time').val());
-			placeHolder = placeHolder.replace("T"," ");
-			placeHolder +=":00";
+			date = ($('#start_date').val());
+			time = ($('#start_time').val());
+
+			placeHolder = date + " " + time + ":00";
+
 			$('<input>', {
 			    type: 'hidden',
 			    id: 'start_time_proper',
 			    name: 'start_time_proper',
 			    value: placeHolder
 			}).appendTo('form');
+
+			alert(placeHolder); 
 		}
 
 
@@ -50,16 +59,25 @@ $(document).ready(function(){
 			alert("Please choose a end time");
 			return false;
 		}
+
+		if (!($('#end_date').val())) {
+			alert("Please choose a end date");
+			return false;
+		}
 		else{ //Format the time a little
-			var placeHolder = ($('#end_time').val());
-			placeHolder = placeHolder.replace("T"," ");
-			placeHolder +=":00";
+			date = ($('#end_date').val());
+			time = ($('#end_time').val());
+
+			placeHolder = date + " " + time + ":00";
+
 			$('<input>', {
 			    type: 'hidden',
 			    id: 'end_time_proper',
 			    name: 'end_time_proper',
 			    value: placeHolder
 			}).appendTo('form');
+
+			alert(placeHolder); 
 		}
 
 		if (!($('#motor').val())) { //add some more checking to make sure number if positive integer later 
