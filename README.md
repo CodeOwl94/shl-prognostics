@@ -13,6 +13,10 @@ The set of code that creates dynamic dropdowns based on databases.
 The jQuery tree library we are attempting to use for having a tree view of the ANZSIC data.  
 
 -----
+###loginTrial
+Code downloaded from [Coding Cage] (http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html) to learn about user registration and log in using PHP/MySQL.  
+
+-----
 ###MailChimp
 Some MailChimp signup form templates
 
