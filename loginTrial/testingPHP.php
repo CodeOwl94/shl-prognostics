@@ -1,13 +1,5 @@
 <?php
-session_start();
-include_once 'dbconnect.php';
-
-if(!isset($_SESSION['user']))
-{
-	header("Location: index.php");
-}
-$res=mysqli_query($con,"SELECT * FROM users_login WHERE user_id=".$ _SESSION['user']);
-$userRow=mysqli_fetch_array($res);
+$flag = 1;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,14 +15,24 @@ $userRow=mysqli_fetch_array($res);
     </div>
     <div id="right">
     	<div id="content">
-        	Hello <?php echo $userRow['user_pass']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+        	Hello 
+            <?php if ($flag): ?> 
+                Bob
+            <?php endif;?>
+        
+            &nbsp;<a href="logout.php?logout">Sign Out</a>
         </div>
     </div>
 </div>
 
 <div id="body">
-	<a href="http://www.codingcage.com/">Coding Cage - Programming Blog</a><br /><br />
-    <p>Focuses on PHP, MySQL, Ajax, jQuery, Web Design and more...</p>
+    <?php if($flag): ?>
+	   <button type="button">Click Me!</button>
+    <?php else: ?>
+        <button type="button">Don't Click Me!</button>
+    <?php endif; ?>
+
+
 </div>
 
 </body>
